@@ -794,13 +794,13 @@ label.radio {
     margin: 10px 0 0 7px;
 }
 
-.radio__text {
+.radio__dot {
     position: relative;
     padding: 0 0 0 24px;
     cursor: pointer;
 }
 
-.radio__text:before {
+.radio__dot:before {
     content: '';
     position: absolute;
     top: -9px;
@@ -812,7 +812,7 @@ label.radio {
     background: #FFF;
 }
 
-.radio__text:after {
+.radio__dot:after {
     content: '';
     position: absolute;
     top: -3px;
@@ -821,57 +821,35 @@ label.radio {
     height: 6px;
     border-radius: 50%;
     background: white;
-    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5); */
     opacity: 0;
     transition: .2s;
 
 }
 
-.radio__input:checked+.radio__text:after {
+/* активировали точку*/
+.radio__input:checked + .radio__dot:after {
     opacity: 1;
     
 }
 
-/* был focus и поэтому тыкая в другое место будто отменялся радио и был по умолчанию */
-.radio__input:checked + .radio__text:before {  
-    /* box-shadow: 0 0 0 3px rgba(255, 255, 0, .7); */
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+/* делаем bg синей*/
+.radio__input:checked + .radio__dot:before {  
     background-color: var(--color-primary-500);
     border: 0;
 }
 
-.radio:hover .radio__text:before {
-    opacity: 1;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+/* делаем bg у before border, чтобы получить hover при неактивной кнопке*/
+.radio__input:hover + .radio__dot:before {
     border: 1px solid var(--color-primary-500);
     
 }
 
-.radio:hover input:checked+.radio__text:before {
+/* делаем hover активной кнопке через другой родительский класс тк дочерний уже заняти выше*/
+.radio:hover .radio__input:checked+.radio__dot:before {
     opacity: 1;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 1px solid red;
-    /* background-color: #6999F5; */
+    background-color: var(--color-primary-400);
+    border: 0;
 }
-
-/* .radio input:hover+.radio__text::after {
-    opacity: 1;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: white;
-    border: 1px solid #460513;
-    top: -9px;
-    left: 0px;
-    transition: 0s;
-} */
-
 
 /* убирает стрелочки по умолчанию в input type */
 /* Chrome, Safari, Edge, Opera */

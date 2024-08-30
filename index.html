@@ -85,11 +85,14 @@
 
     <section class="grade">
         <div class="container-grade">
-            <div class="grade__tittle">
-                <h2>Отзывы и оценки</h2>
-                <div class="arrows">
-                    <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
-                    <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-right.svg" alt=""></div></button>
+            <div class="title-block">
+                <h2 class="case__h2">Отзывы и оценки</h2>
+                <div class="title-block__button">
+                    <!-- <button class="button button--tertiary button--size-md">Смотреть всё</button> -->
+                    <div class="arrows">
+                        <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
+                        <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-right.svg" alt=""></div></button>
+                    </div>
                 </div>
             </div>
             <div class="grade__content">
@@ -390,25 +393,16 @@
                         </ul>
                     </p> -->
                 </div>
-                
                 <div class="steps__line"></div>
-                
-                
-
-                
-
-
-
-
             </div>
         </div>
     </section >
 
     <section class="case">
         <div class="container-case">
-            <div class="case_ttitle">
+            <div class="title-block">
                 <h2 class="case__h2">Выигранные дела</h2>
-                <div class="case__button">
+                <div class="title-block__button">
                     <button class="button button--tertiary button--size-md">Смотреть всё</button>
                     <div class="arrows">
                         <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
@@ -416,7 +410,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="case_content">
                 <div class="case__item">
                     <h5 class="case__h5">Дело №А60-52036/2020</h5>
@@ -569,6 +562,108 @@
                 <button class="button button--size-lg">Перезвоните мне</button>
                 <p class="feedback__p">Нажимая «Перезвонить мне», вы принимаете Положение и Согласие на обработку персональных данных.</p>
             </form>
+        </div>
+    </section>
+    
+    <section class="workers">
+        <div class="container-workers">
+            <div class="title-block">
+                <h2 class="case__h2">Наши юристы</h2>
+                <div class="title-block__button">
+                    <button class="button button--tertiary button--size-md">Смотреть всё</button>
+                    <div class="arrows">
+                        <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
+                        <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-right.svg" alt=""></div></button>
+                    </div>
+                </div>
+            </div>
+            <div class="workers-cards">
+                <div class="worker-card" href="">
+                    <div class="worker-card__top">
+                        <img class="worker-card__image" src="./assets/img/image-director.png" alt="">
+                        <div class="icon_social">
+                            <img src="./assets/svg/icon-vk.svg" alt="">
+                            <img src="./assets/svg/icon-instagram.svg" alt="">
+                            <img src="./assets/svg/icon-telegram.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="worker-card__name">
+                        <h5 class="worker-card__fio">Роман Родин</h5>
+                        <p class="worker-card__function">Генеральный директор.<br>Основатель проекта «Делу время».<br>Корпоративный юрист, специалист по банкротству.</p>
+                    </div>
+                    <div class="worker-card__contact">
+                        <div class="worker-card__title">Телефон:</div>
+                        <div class="worker-card__data">207-54-59 и 8 952 940-11-99</div>
+                        <div class="worker-card__title">Почта:</div>
+                        <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
+                    </div>
+                </div>
+                <div class="worker-card" href="">
+                    <div class="worker-card__top">
+                        <img class="worker-card__image" src="./assets/img/image-worker-1.png" alt="">
+                        <div class="icon_social">
+                            <img src="./assets/svg/icon-vk.svg" alt="">
+                            <!-- <img src="./assets/svg/icon-instagram.svg" alt="">
+                            <img src="./assets/svg/icon-telegram.svg" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="worker-card__name">
+                        <h5 class="worker-card__fio">Варвара Пермякова</h5>
+                        <p class="worker-card__function">Директор</p>
+                    </div>
+                    <div class="worker-card__contact">
+                        <div class="worker-card__title">Телефон:</div>
+                        <div class="worker-card__data">207-54-59 и 8 952 940-11-99</div>
+                        <div class="worker-card__title">Почта:</div>
+                        <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
+                    </div>
+                </div>
+                <div class="worker-card" href="">
+                    <div class="worker-card__top">
+                        <img class="worker-card__image" src="./assets/img/image-worker-2.png" alt="">
+                        <div class="icon_social">
+                            <img src="./assets/svg/icon-vk.svg" alt="">
+                            <img src="./assets/svg/icon-instagram.svg" alt="">
+                            <!-- <img src="./assets/svg/icon-telegram.svg" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="worker-card__name">
+                        <h5 class="worker-card__fio">Вячеслав Иванов</h5>
+                        <p class="worker-card__function">Юрист по банкротству. <br>Управляющий партнер «Делу время» Кемерово</p>
+                    </div>
+                    <div class="worker-card__contact">
+                        <div class="worker-card__title">Телефон:</div>
+                        <div class="worker-card__data">207-54-59 и 8 952 940-11-99</div>
+                        <div class="worker-card__title">Почта:</div>
+                        <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
+                    </div>
+                </div>
+                <div class="worker-card" href="">
+                    <div class="worker-card__top">
+                        <img class="worker-card__image" src="./assets/img/image-worker-3.png" alt="">
+                        <div class="icon_social">
+                            <!-- <img src="./assets/svg/icon-vk.svg" alt=""> -->
+                            <img src="./assets/svg/icon-instagram.svg" alt="">
+                            <img src="./assets/svg/icon-telegram.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="worker-card__name">
+                        <h5 class="worker-card__fio">Ольга Александрова</h5>
+                        <p class="worker-card__function">Управляющий партнер «Делу время».<br>Юрист по банкротству, гражданскому и семейному праву.</p>
+                    </div>
+                    <div class="worker-card__contact">
+                        <div class="worker-card__title">Телефон:</div>
+                        <div class="worker-card__data">207-54-59 и 8 952 940-11-99</div>
+                        <div class="worker-card__title">Почта:</div>
+                        <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
         </div>
     </section>
 

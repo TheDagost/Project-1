@@ -6,6 +6,11 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/TheDagost/Project-1)
 
+```bash
+# Добавить ссылку на фигму
+```
+
+
 # Git 
 ```bash
 # Пометить на сохранение файлы

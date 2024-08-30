@@ -1212,19 +1212,19 @@ label.radio {
     padding-top: 119px;
 }
 
-.case__button {
+.title-block__button {
     display: flex;
     align-items: center;
 }
 
-.case_ttitle {
+.title-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
 }
 
-.case__button .button--size-md {
+.title-block__button .button--size-md {
     margin-right: 24px;
 }
 
@@ -1440,7 +1440,6 @@ label.radio {
     justify-content: center;
     height: 602px;
     background-color: var(--color-primary-500);
-
 }
 
 .container__feedback {
@@ -1485,4 +1484,92 @@ label.radio {
     color: var(--color-text-gray-400);
     text-align: center;
     margin-top: 13px;
+}
+
+.workers {
+    display: flex;
+    justify-content: center;
+    height: 706px;
+
+}
+
+.container-workers {
+    display: flex;
+    flex-direction: column;
+    width: 1312px;
+    padding-top: 124px;
+}
+
+.workers-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.worker-card {
+    display: block;
+    width: 304px;
+    height: 510px;
+}
+
+.worker-card__top {
+    background-color: var(--color-text-gray-50);
+    display: flex;
+    border-radius: 16px;
+    position: relative;
+    padding: 14px;
+    height: 360px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.icon_social {
+    display: flex;
+    z-index: 3;
+}
+
+.icon_social img:not(:last-child) {
+    margin-right: 8px;
+}
+
+.worker-card__image {
+    position: absolute;
+    bottom: 0;
+    max-width: 70%;
+    left: 20%;
+}
+
+.worker-card__fio {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.worker-card__function {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--color-text-gray-500);
+}
+
+.worker-card__contact {
+    display: grid;
+    grid-template-columns: 62px auto;
+    gap: 3px 12px;
+}
+
+.worker-card__title {
+    font-weight: 600;
+}
+
+.worker-card__contact a {
+    text-decoration: none;
+    color: var(--color-primary-500);
+}
+
+.worker-card__data,
+.worker-card__title {
+    font-size: 14px;
+}
+
+.worker-card__name {
+    margin: 9px 0 12px 0;
+    height: 82px;
 }

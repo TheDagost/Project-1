@@ -9,7 +9,7 @@
     <header class="header">
         <div class="container">
             <div class="header__left">
-                <a class="logo header__logo" href=""><img src="./assets/img/logo.png" alt="Не удалость загрущить логотип"></a>
+                <a class="logo header__logo"><img src="./assets/img/logo.png" alt="Не удалость загрущить логотип"></a>
             </div>
 
             <div class="header_centr">
@@ -86,7 +86,7 @@
     <section class="grade">
         <div class="container-grade">
             <div class="title-block">
-                <h2 class="case__h2">Отзывы и оценки</h2>
+                <h2 class="title-block__h2">Отзывы и оценки</h2>
                 <div class="title-block__button">
                     <!-- <button class="button button--tertiary button--size-md">Смотреть всё</button> -->
                     <div class="arrows">
@@ -401,7 +401,7 @@
     <section class="case">
         <div class="container-case">
             <div class="title-block">
-                <h2 class="case__h2">Выигранные дела</h2>
+                <h2 class="title-block__h2">Выигранные дела</h2>
                 <div class="title-block__button">
                     <button class="button button--tertiary button--size-md">Смотреть всё</button>
                     <div class="arrows">
@@ -568,7 +568,7 @@
     <section class="workers">
         <div class="container-workers">
             <div class="title-block">
-                <h2 class="case__h2">Наши юристы</h2>
+                <h2 class="title-block__h2">Наши юристы</h2>
                 <div class="title-block__button">
                     <button class="button button--tertiary button--size-md">Смотреть всё</button>
                     <div class="arrows">
@@ -578,7 +578,8 @@
                 </div>
             </div>
             <div class="workers-cards">
-                <div class="worker-card" href="">
+                <div class="worker-card">
+                    <a class="card-link" href="#"></a>
                     <div class="worker-card__top">
                         <img class="worker-card__image" src="./assets/img/image-director.png" alt="">
                         <div class="icon_social">
@@ -595,10 +596,11 @@
                         <div class="worker-card__title">Телефон:</div>
                         <div class="worker-card__data">207-54-59 и 8 952 940-11-99</div>
                         <div class="worker-card__title">Почта:</div>
-                        <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
+                        <a class="worker-card__data" href="mailto:mail@mail.ru">mail@mail.ru </a>
                     </div>
                 </div>
-                <div class="worker-card" href="">
+                <div class="worker-card">
+                    <a class="card-link" href="#"></a>
                     <div class="worker-card__top">
                         <img class="worker-card__image" src="./assets/img/image-worker-1.png" alt="">
                         <div class="icon_social">
@@ -618,7 +620,8 @@
                         <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
                     </div>
                 </div>
-                <div class="worker-card" href="">
+                <div class="worker-card">
+                    <a class="card-link" href="#"></a>
                     <div class="worker-card__top">
                         <img class="worker-card__image" src="./assets/img/image-worker-2.png" alt="">
                         <div class="icon_social">
@@ -638,7 +641,8 @@
                         <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
                     </div>
                 </div>
-                <div class="worker-card" href="">
+                <div class="worker-card">
+                    <a class="card-link" href="#"></a>
                     <div class="worker-card__top">
                         <img class="worker-card__image" src="./assets/img/image-worker-3.png" alt="">
                         <div class="icon_social">
@@ -658,15 +662,76 @@
                         <a class="worker-card__data" href="mailto:mail@mail.ru ">mail@mail.ru </a>
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </div>
     </section>
 
+    <section class="review">
+        <div class="container-review">
+            <div class="title-block-v2">
+                <h2 class="title-block__h2">Отзывы наших клиентов</h2>
+                <div class="title-block__buttons">
+                    <div class="title-block__tabs">
+                        <button class="button button--size-md">Видео</button>
+                        <button class="button button--size-md button--transparent">Текстовые</button>
+                    </div>
+                    <div class="title-block__button">
+                        <button class="button button--tertiary button--size-md">Смотреть всё</button>
+                        <div class="arrows">
+                            <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
+                            <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-right.svg" alt=""></div></button>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-cards">
+                <div class="review-card">
+                    <a class="card-link" href="#"></a>
+                    <div class="review-card__video"><img src="./assets/img/images-video-1.png" alt=""></div>
+                    <h5 class="review-card__h5">Более 500 000 ₽ долга успешно списано! </h5>
+                    <p class="review-card__p">Михаил Нестеренко</p>
+                    <p class="review-card__p">Дело А65-24010/2022</p>
+                    <p class="review-card__p">329K просмотров, 1 месяц назад</p>
+                </div>
+                <div class="review-card">
+                    <a class="card-link" href="#"></a>
+                    <div class="review-card__video"><img src="./assets/img/images-video-2.png" alt=""></div>
+                    <h5 class="review-card__h5">Более 400 000 ₽ долга списано! </h5>
+                    <p class="review-card__p">Андрей Климов</p>
+                    <p class="review-card__p">Дело А66-02410/2023</p>
+                    <p class="review-card__p">569K просмотров, 1 месяц назад</p>
+                </div>
+                <div class="review-card">
+                    <a class="card-link" href="#"></a>
+                    <div class="review-card__video"><img src="./assets/img/images-video-3.png" alt=""></div>
+                    <h5 class="review-card__h5">100 000 ₽ долга списано! </h5>
+                    <p class="review-card__p">Евгения Федорова</p>
+                    <p class="review-card__p">Дело А54-25410/2023</p>
+                    <p class="review-card__p">49K просмотров, 1 месяц назад</p>
+                </div>
+                <div class="review-card">
+                    <a class="card-link" href="#"></a>
+                    <div class="review-card__video"><img src="./assets/img/images-video-4.png" alt=""></div>
+                    <h5 class="review-card__h5">5 000 000 ₽ долга списано! </h5>
+                    <p class="review-card__p">Олеся Нестеренко</p>
+                    <p class="review-card__p">Дело А64-54560/2023</p>
+                    <p class="review-card__p">425K просмотров, 5 месяц назад</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="smi">
+        <div class="container__smi">
+            <h2 class="smi__h2">Интервью Романа Родина на канале «Россия-24»</h2>
+            <p class="smi__p">Наших специалистов часто приглашают в качестве экспертов на федеральные каналы и в СМИ. Руководитель и основатель компании «Делу Время» Роман Родин рассказывает о нюансах банкротства на телеканале «Россия-24»</p>
+            <div class="smi__image">
+                <a class="card-link" href="#"></a>
+                <div class="smi__image-mask">
+                    <img src="./assets/img/images-video-5.png" alt=""></div>
+            </div>
+        </div>
+    </section>
 
 
 

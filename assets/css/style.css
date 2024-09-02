@@ -1716,7 +1716,7 @@ label.radio {
 .question {
     display: flex;
     justify-content: center;
-    height: 754px;
+    /* height: 754px; */
 }
 
 .container__question {
@@ -1744,9 +1744,13 @@ label.radio {
     position: relative;
     overflow: hidden;
     /* cursor: pointer; */
-    margin: 0 auto 16px;
+    
     display: block;
     box-shadow: 2px 2px 6px 0px hsla(221, 39%, 11%, 0.2);
+}
+
+.question__content .question__accordion:not(:last-child) {
+    margin: 0 auto 16px;
 }
 
 .question__h5 {
@@ -1786,27 +1790,73 @@ label.radio {
 
 }
 
-
-/* .question__accordion::after {
-    z-index: 12;
-    position: absolute;
-    right: 24px;
-    top: 15px;
-    content: url(../svg/icon-arrow-bottom.svg);
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-right: 3px solid #425995;
-    border-bottom: 3px solid #425995;
-    transform: rotate(-45deg);
-    transform-origin: center;
-    transition: .3s;
-} */
-
-/* .question__accordion[open]::after {
-    transform: rotate(45deg);
-} */
-
 .question__h2 {
     margin-bottom: 32px;
+}
+
+.guarantee {
+    display: flex;
+    justify-content: center;
+    height: 860px;
+}
+
+.container-guarantee {
+    display: flex;
+    flex-direction: row;
+    width: 1312px;
+    /* padding-top: 124px; */
+    justify-content: space-between;
+    margin-top: 124px;
+    background-color: var(--color-text-gray-50);
+    border-radius: 24px;
+}
+
+.guarantee__right {
+    width: 592px;
+    margin: 105px 0 0 80px;
+}
+
+.guarantee__left {
+    width: 640px;
+}
+
+.guarantee__p {
+    width: 502px;
+    margin: 32px 0 28px 0;
+    line-height: 1.4;
+}
+
+.guarantee__doc {
+    margin-top: 48px;
+}
+
+.guarantee__h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.guarantee__list li {
+    display: flex;
+    width: 640px;
+}
+
+.guarantee__list a {
+    text-decoration: none;
+    color: var(--color-primary-500);
+}
+
+.guarantee__list li:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.guarantee__list li::before {
+    content: url(../svg/icon-doc.svg);
+    margin-right: 6px;
+}
+
+.guarantee__left {
+    background-image: url(../img/image-guarantee.png);
+    border-radius: 0 24px 24px 0;
+    background-position: 36%;
 }

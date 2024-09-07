@@ -1,3 +1,15 @@
+/*
+Структура css файла
+- сначало идет reset (сбрасываем дефолтные настройки браузера)
+- потом идут общие стили (это стили переиспользуемых блоков (.container .button .link .menu .logo .h[1-6]))
+- потом идут стили секций ()
+- - сначало идут общие стили секции
+- - потом идут медиазапросы
+
+- свойства писать в алфавитном порядке - тупо искать быстрей будешь
+- соблюдать правило - меньше кода меньше работы (без фанатизма)
+*/
+
 /**
   Нормализация блочной модели
  */
@@ -220,6 +232,11 @@ h2 {
 
 }
 
+.container {
+    /* maring: 0 auto*/
+    max-width: 1312px;
+}
+
 header.header {
     display: flex;
     height: 88px;
@@ -416,10 +433,7 @@ a.phone-link.phone-link--primary {
     border-radius: 0 0 32px 32px;
 }
 
-.container-banner {
-    /* display: flex; */
-    /* flex-direction: column; */
-    width: 1312px;
+.banner .container {
     padding-left: 112px;
 }
 
@@ -462,10 +476,9 @@ a.phone-link.phone-link--primary {
     height: 600px;
 }
 
-.container-triggers {
+.triggers .container {
     display: flex;
     flex-direction: column;
-    width: 1312px;
     padding-top: 124px;
 }
 

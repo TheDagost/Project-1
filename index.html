@@ -11,10 +11,11 @@
             <div class="header__left">
                 <a class="logo header__logo"><img src="./assets/img/logo.png" alt="Не удалость загрущить логотип"></a>
             </div>
-
-            <div class="header_centr">
-                <button class="button button--dropdown button--primary">Услуги</button>
+            <!-- Ошибка в наименовании класса -->
+            <div class="header__center">
                 <nav class="menu">
+                    <!-- Элемент является элементом меню и должен находится внутри меню -->
+                    <button class="menu__item menu__item--dropdown">Услуги</button>
                     <a class="menu__item menu__item--active" href="">Оплата</a>
                     <a class="menu__item" href="">Медиа</a>
                     <a class="menu__item" href="">О нас</a>
@@ -22,9 +23,10 @@
                 </nav>
             </div>
 
-            <div class="header_right">
-                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-search.svg" alt=""><p>Поиск</p></button>
-                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-map.svg" alt=""><p>Москва</p></button>
+            <div class="header__right">
+                <!-- Лишние теги p -->
+                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-search.svg" alt="">Поиск</button>
+                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-map.svg" alt="">Москва</button>
                 <a class="phone-link phone-link--primary" href="tel:+7-(499)-112-33-49">+7 (499) 112 33 49</a>
             </div>
         </div>
@@ -32,14 +34,16 @@
 
     <div class="breadcrumb">
         <nav class="container-breadcrumb">
-            <a href=""><p>Главная</p></a>
-            <a href=""><p>Услуги</p></a>
+            <!-- Лишние теги p -->
+            <a href="">Главная</a>
+            <a href="">Услуги</a>
             <span>Банкротство физических лиц</span>
         </nav>
     </div>
 
     <section class="banner">
-        <div class="container-banner">
+        <!-- в CSS .banner .container -->
+        <div class="container">
             <h2>Банкротство физических лиц <br>в Москве</h2>
             <ul class="banner__list">
                 <li>Юридическая гарантия списания долга в договоре</li>
@@ -52,42 +56,44 @@
         </div>
     </section>
 
-    <section class="triggers">
+    <section class="triggers-section">
         <div class="container-triggers">
             <div class="triggers__text">
                 <h2>Юридическая группа «Делу время» </h2>
                 <p>Лидер в России среди компаний <br> по банкротству граждан</p>
             </div>
             <div class="cards">
-                <div class="cards__item-1">
-                    <div class="cards__icon"><img src="./assets/svg/icon-card-1.svg" alt=""></div>
-                    <div class="cards__tittle">21<span>год</span></div>
-                    <p class="cards__p">Опыта<br>в банкротстве</p>
+                <!-- зачем ставил "1" -->
+                <div class="cards__item">
+                    <div class="cards__item-icon"><img src="./assets/svg/icon-card-2.svg" alt=""></div>
+                    <div class="cards__item-tittle">4,2<span>млрд</span></div>
+                    <p class="cards__item-description">Списано<br>долгов</p>
                 </div>
-                <div class="cards__item-1">
-                    <div class="cards__icon"><img src="./assets/svg/icon-card-2.svg" alt=""></div>
-                    <div class="cards__tittle">4,2<span>млрд</span></div>
-                    <p class="cards__p">Списано<br>долгов</p>
+                <div class="cards__item">
+                    <div class="cards__item-icon"><img src="./assets/svg/icon-card-1.svg" alt=""></div>
+                    <div class="cards__item-tittle">21<span>год</span></div>
+                    <p class="cards__item-description">Опыта<br>в банкротстве</p>
                 </div>
-                <div class="cards__item-1">
-                    <div class="cards__icon"><img src="./assets/svg/icon-card-3.svg" alt=""></div>
-                    <div class="cards__tittle">3<span>тыс</span></div>
-                    <p class="cards__p">Людей <br>списали долги</p>
+                <div class="cards__item">
+                    <div class="cards__item-icon"><img src="./assets/svg/icon-card-3.svg" alt=""></div>
+                    <div class="cards__item-tittle">3<span>тыс</span></div>
+                    <p class="cards__item-description">Людей <br>списали долги</p>
                 </div>
-                <div class="cards__item-1">
-                    <div class="cards__icon"><img src="./assets/svg/icon-card-4.svg" alt=""></div>
-                    <div class="cards__tittle">21<span>филиал</span></div>
-                    <p class="cards__p">По всей стране</p>
+                <div class="cards__item">
+                    <div class="cards__item-icon"><img src="./assets/svg/icon-card-4.svg" alt=""></div>
+                    <div class="cards__item-tittle">21<span>филиал</span></div>
+                    <p class="cards__item-description">По всей стране</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="grade">
-        <div class="container-grade">
-            <div class="title-block">
-                <h2 class="title-block__h2">Отзывы и оценки</h2>
-                <div class="title-block__button">
+        <div class="container">
+            <div class="grade__title">
+                <!-- ИМЕННО В ЭТОМ СЛУЧАЕ МОЖНО ИМЕНОВАТЬ КАК H2 НО можно и title-sm -->
+                <h2 class="h2">Отзывы и оценки</h2>
+                <div class="grade__title-button">
                     <!-- <button class="button button--tertiary button--size-md">Смотреть всё</button> -->
                     <div class="arrows">
                         <button class="button button--arrow"><div class="button--icn"><img src="./assets/svg/icon-arrow-left.svg" alt=""></div></button>
@@ -103,11 +109,11 @@
                         <p class="grade__name">Яндекс</p>
                         <span class="grade__rating"><p>4,8</p>
                             <div class="stars">
-                                <img src="./assets/svg/icon-star.svg" alt=""> 
-                                <img src="./assets/svg/icon-star.svg" alt="">
-                                <img src="./assets/svg/icon-star.svg" alt="">
-                                <img src="./assets/svg/icon-star.svg" alt="">
-                                <img src="./assets/svg/icon-star.svg" alt="">
+                                <img class="star" src="./assets/svg/icon-star.svg" alt="">
+                                <img class="star" src="./assets/svg/icon-star.svg" alt="">
+                                <img class="star" src="./assets/svg/icon-star.svg" alt="">
+                                <img class="star" src="./assets/svg/icon-star.svg" alt="">
+                                <img class="star" src="./assets/svg/icon-star.svg" alt="">
                             </div> 
                         </span>
                         <p class="grade__review">78 отзывов</p>
@@ -146,7 +152,7 @@
     </section>
         
     <section class="info">
-        <div class="container-info">
+        <div class="container">
             <div class="info__left">
                 <div class="info__tittle">
                     <h2>Банкротство физических лиц</h2>
@@ -155,6 +161,7 @@
                 </div>
                 <div class="info__list">
                     <h2>Вам подходит банкротство если</h2>
+                    <!-- неинформативное название нужно ставить bancrot-list -->
                     <ul class="numbers">
                         <li class="numbers-item">Вы не рассчитали силы по кредитам, а с платежами уже не справляетесь</li>
                         <li class="numbers-item">Взяли кредит на бизнес, но из-за кризиса ваше дело прогорело</li>
@@ -173,31 +180,31 @@
     </section>
 
     <section class="calculator">
-        <div class="container-calculator">
-            <h2 class="calculator__title">Калькулятор стоимости<br>банкротства физических лиц</h2>
-            <div class="calculator__status">
-                <div class="calculator__status-item">
+        <div class="container">
+            <h2 class="h2">Калькулятор стоимости<br>банкротства физических лиц</h2>
+            <div class="form-navigation">
+                <div class="form-navigation-item">
                     <p>1. Сумма долга</p>
                     <div class="rectangle rectangle--active"></div>
                 </div>
-                <div class="calculator__status-item">
+                <div class="form-navigation-item">
                     <p>2. Семейное положение</p>
                     <div class="rectangle"></div>
                 </div>
-                <div class="calculator__status-item">
+                <div class="form-navigation-item">
                     <p>3. Обязательства</p>
                     <div class="rectangle"></div>
                 </div>
-                <div class="calculator__status-item">
+                <div class="form-navigation-item">
                     <p>4. Предварительный итог</p>
                     <div class="rectangle"></div>
                 </div>
                 <p class="calculator__p">1 из 4</p>
             </div>
-            <form class="calculator__form" action="">
-                <h2 class="calculator__form-title">1. Сумма долга</h2>
-                <div class="calculator__question">
-                    <h3 class="calculator__question-h3">Сумма общей задолженности по всем долгам</h3>
+            <form class="form form--calculator" action="">
+                <h2 class="h2">1. Сумма долга</h2>
+                <div class="radio-group">
+                    <h3 class="h3">Сумма общей задолженности по всем долгам</h3>
                     <label class="radio">
                         <input class="radio__input" type="radio" name="variant-q1" value="250000" required>
                         <div class="radio__dot"></div>До 250 000 ₽
@@ -211,8 +218,8 @@
                         <div class="radio__dot"></div>Более 1 млн. ₽ 
                     </label>
                 </div>
-                <div class="calculator__question">
-                    <h3 class="calculator__question-h3">Размер вашего официального дохода, если есть</h3>
+                <div class="radio-group">
+                    <h3 class="h3">Размер вашего официального дохода, если есть</h3>
                     <label class="radio">
                         <input class="radio__input" type="radio" name="variant-q2" value="Менее 20 000 ₽" required>
                         <div class="radio__dot"></div>Менее 20 000 ₽
@@ -227,12 +234,13 @@
                     </label>
                 </div>
 
-                <div class="calculator__question">
-                    <h3 class="calculator__question-h3">Количество кредитов</h3>
-                    <div class="calculator__quantity">
-                        <button class="button button--arrow button--minus-plus"><div class="button--icn"><img src="./assets/svg/icon-minus.svg" alt=""></div></button>
-                        <input class="input input--number" type="number" required>
-                        <button class="button button--arrow button--minus-plus"><div class="button--icn"><img src="./assets/svg/icon-plus.svg" alt=""></div></button>
+                <div class="counter-group">
+                    <h3 class="h3">Количество кредитов</h3>
+                    <div class="counter">
+                        <!-- лишний див -->
+                        <button class="counter__button counter__button--minus button button--md"><img src="./assets/svg/icon-minus.svg" alt=""></button>
+                        <input class="counter__value" type="number" required>
+                        <button class="counter__button counter__button--plus button button--md"><img src="./assets/svg/icon-plus.svg" alt=""></button>
                     </div>
                 </div>
                 <button class="button button--size-lg" type="submit">Далее</button>
@@ -241,56 +249,57 @@
     </section>
 
     <section class="profit">
-        <div class="container-profit">
-            <h2 class="profit__h2">Чем выгодно банкроство?</h2>
+        <div class="container">
+            <h2 class="h2">Чем выгодно банкроство?</h2>
             <div class="profit-block">
                 <div class="profit-block__plus">
-                    <div class="profit-block__item">
-                        <img class="profit-block_img" src="./assets/svg/icon-plus-big.svg" alt="">
-                        <h3 class="profit-block__h3">Долгожданное спокойствие</h3>
-                        <p class="profit-block__p">Ни банки, ни коллекторы больше не будут досаждать</p>
+                    <div class="profit-block__item profit-block__item--plus">
+                        <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
+                        <h3 class="h3">Долгожданное спокойствие</h3>
+                        <p class="profit-block__description">Ни банки, ни коллекторы больше не будут досаждать</p>
                     </div>
-                    <div class="profit-block__item">
+                    <div class="profit-block__item profit-block__item--plus">
                         <img class="profit-block_img" src="./assets/svg/icon-plus-big.svg" alt="">
                         <h3 class="profit-block__h3">Освобождение имущества и счетов</h3>
-                        <p class="profit-block__p">Приостановление исполнительных производств</p>
+                        <p class="profit-block__description">Приостановление исполнительных производств</p>
                      </div>
-                    <div class="profit-block__item">
+                    <div class="profit-block__item profit-block__item--plus">
                         <img class="profit-block_img" src="./assets/svg/icon-plus-big.svg" alt="">
                         <h3 class="profit-block__h3">Все долги замораживаются</h3>
-                        <p class="profit-block__p">Остановка начисления процентов и штрафов</p>
+                        <p class="profit-block__description">Остановка начисления процентов и штрафов</p>
                     </div>
-                    <div class="profit-block__item">
+                    <div class="profit-block__item profit-block__item--plus">
                         <img class="profit-block_img" src="./assets/svg/icon-plus-big.svg" alt="">
                         <h3 class="profit-block__h3">Списание долгов</h3>
-                        <p class="profit-block__p">Списание долгов после окончания процедуры банкротства</p>
+                        <p class="profit-block__description">Списание долгов после окончания процедуры банкротства</p>
                     </div>
                 </div>
                 <div class="profit-block__minus">
                      <div class="profit-block__item profit-block__item--minus">
-                        <img class="profit-block_img profit-block__img--minus" src="./assets/svg/icon-minus-big.svg" alt="">
-                        <h3 class="profit-block__h3 profit-block__h3--minus">Продажа имущества</h3>
-                        <p class="profit-block__p profit-block__p--minus">Кроме единственного жилья</p>
+                        <img class="profit-block_img" src="./assets/svg/icon-minus-big.svg" alt="">
+                        <h3 class="h3 icon--minus-cyrcle">Продажа имущества</h3>
+                        <p class="profit-block__description">Кроме единственного жилья</p>
                     </div>
                     <div class="profit-block__item profit-block__item--minus">
                         <img class="profit-block_img" src="./assets/svg/icon-minus-big.svg" alt="">
-                        <h3 class="profit-block__h3 profit-block__h3--minus">Руководящие должности</h3>
-                        <p class="profit-block__p profit-block__p--minus">Не можете 3 года занимать руководящие должности</p>
+                        <h3 class="h3 icon--minus-cyrcle">Руководящие должности</h3>
+                        <p class="profit-block__description">Не можете 3 года занимать руководящие должности</p>
                     </div>
                     <div class="profit-block__item profit-block__item--minus">
                         <img class="profit-block_img" src="./assets/svg/icon-minus-big.svg" alt="">
-                        <h3 class="profit-block__h3 profit-block__h3--minus">Статус банкрота</h3>
-                        <p class="profit-block__p profit-block__p--minus">Уведомлять кредиторов о статусе банкрота</p>
+                        <h3 class="h3 icon--minus-cyrcle">Статус банкрота</h3>
+                        <p class="profit-block__description">Уведомлять кредиторов о статусе банкрота</p>
                     </div>
                  </div>
             </div>
         </div>
     </section>
 
-    <section class="steps">
-        <div class="container-steps">
-            <h2 class="steps__h2">5 простых шагов к списанию долгов</h2>
-            <div class="steps__content">
+    <!-- я бы секции так обзывал секции -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="h2">5 простых шагов к списанию долгов</h2>
+            <div class="steps">
                 <div class="steps__item">
                     <h3 class="steps__h3">1 шаг</h3>
                     <div class="steps__divider steps__divider--short-1 steps__item--red"></div>
@@ -412,8 +421,8 @@
             </div>
             <div class="case_content">
                 <div class="case__item">
-                    <h5 class="case__h5">Дело №А60-52036/2020</h5>
-                    <p class="case__p">Свердловская область</p>
+                    <h5 class="case__title">Дело №А60-52036/2020</h5>
+                    <p class="case__description">Свердловская область</p>
                     <div class="case__date">
                         <p class="case__date-tittle">Принято в работу:</p>
                         <p class="case__date-p">16.10.2020</p>
@@ -514,39 +523,35 @@
             </div>
             <div class="price__bottom">
                 <div class="price__bottom-right">
-                    <ul class="price__list">
-                        <li>Консультация</li>
-                        <li>Сбор документов по долгам</li>
-                        <li>Подготовка и подача документов</li>
-                        <li>Представительство в суде</li>
-                        <li>Арбитражное управление</li>
-                        <li>Взаимодействие с кредиторами</li>
-                        <li>Общение с коллекторами</li>
+                    <ul class="list list--services">
+                        <li class="list__item">Консультация</li>
+                        <li class="list__item">Сбор документов по долгам</li>
+                        <li class="list__item">Подготовка и подача документов</li>
+                        <li class="list__item">Представительство в суде</li>
+                        <li class="list__item">Арбитражное управление</li>
+                        <li class="list__item">Взаимодействие с кредиторами</li>
+                        <li class="list__item">Общение с коллекторами</li>
                     </ul>
                     <div class="line"></div>
                 </div>
                 <div class="price__bottom-left">
                     <p class="price__bottom-p">В стоимость включены все обязательные расходы на процедуру</p>
-                    <div class="price__table">
-                        <p class="price__table-tittle">Расходы на вознаграждение финансовому управляющему</p>
-                        <p class="price__table-tittle"><span class="price__table-tittle--bold">25 000 руб.</span></p>
-                        <p class="price__table-tittle">Публикация информационного сообщения в газете «Коммерсант»</p>
-                        <p class="price__table-tittle"><span class="price__table-tittle--bold">10 000 руб.</span></p>
-                        <p class="price__table-tittle">Оплата направления запросов в государственные органы</p>
-                        <p class="price__table-tittle"><span class="price__table-tittle--bold">2000 – 5000 руб.</span></p>
-                        <p class="price__table-tittle">Информационные сообщения в ЕФРСБ -<br>(потребуется 7-10 публикаций). За 1 публикацию</p>
-                        <p class="price__table-tittle price__table-tittle-pading"><span class="price__table-tittle--bold">400 руб.</span></p>
-                        <p class="price__table-tittle">Нотариальные расходы (доверенность)</p>
-                        <p class="price__table-tittle"><span class="price__table-tittle--bold">1500 – 3000 руб.</span></p>
-                        <p class="price__table-tittle">Почтовые расходы (доверенность)</p>
-                        <p class="price__table-tittle"><span class="price__table-tittle--bold">до 1000 руб.</span></p>
+                    <div class="table table--prices">
+                        <p class="table-tittle">Расходы на вознаграждение финансовому управляющему</p>
+                        <p class="table-tittle"><span class="table-tittle--bold">25 000 руб.</span></p>
+                        <p class="table-tittle">Публикация информационного сообщения в газете «Коммерсант»</p>
+                        <p class="table-tittle"><span class="table-tittle--bold">10 000 руб.</span></p>
+                        <p class="table-tittle">Оплата направления запросов в государственные органы</p>
+                        <p class="table-tittle"><span class="table-tittle--bold">2000 – 5000 руб.</span></p>
+                        <p class="table-tittle">Информационные сообщения в ЕФРСБ -<br>(потребуется 7-10 публикаций). За 1 публикацию</p>
+                        <p class="table-tittle table-tittle-pading"><span class="table-tittle--bold">400 руб.</span></p>
+                        <p class="table-tittle">Нотариальные расходы (доверенность)</p>
+                        <p class="table-tittle"><span class="table-tittle--bold">1500 – 3000 руб.</span></p>
+                        <p class="table-tittle">Почтовые расходы (доверенность)</p>
+                        <p class="table-tittle"><span class="price__table-tittle--bold">до 1000 руб.</span></p>
                     </div>
                 </div>
             </div>
-
-            
-
-
         </div>
     </section>
 
@@ -688,10 +693,10 @@
                 <div class="review-card">
                     <a class="card-link" href="#"></a>
                     <div class="review-card__video"><img src="./assets/img/images-video-1.png" alt=""></div>
-                    <h5 class="review-card__h5">Более 500 000 ₽ долга успешно списано! </h5>
-                    <p class="review-card__p">Михаил Нестеренко</p>
-                    <p class="review-card__p">Дело А65-24010/2022</p>
-                    <p class="review-card__p">329K просмотров, 1 месяц назад</p>
+                    <h5 class="review-card__title">Более 500 000 ₽ долга успешно списано! </h5>
+                    <p class="review-card__name">Михаил Нестеренко</p>
+                    <p class="review-card__document">Дело А65-24010/2022</p>
+                    <p class="review-card__info">329K просмотров, 1 месяц назад</p>
                 </div>
                 <div class="review-card">
                     <a class="card-link" href="#"></a>
@@ -827,9 +832,7 @@
                 </div>
 
                 <div class="news-card">
-                    <div class="news__image">
-                        <img src="./assets/img/image-news-4.png" alt="">
-                    </div>
+                    <img class="news__image" src="./assets/img/image-news-4.png" alt="">
                     <span class="news__date">2 июня 2022</span>
                     <h5 class="news__h5">Банкротство - последствия для должника и его родственников</h5>
                     <p class="news__p">Процедура банкротства в некоторых случаях является единственным способом решения финансовых проблем граждан.</p>
@@ -919,21 +922,24 @@
 
                 <div class="footer__right">
                     <div class="footer__top">
-                        <ul class="footer__list">
-                            <li class="footer__list-title">Услуги</li>
-                            <li><a href="#">Услуги по банкротству</a></li>
-                            <li><a href="#">Стоимость банкротства</a></li>
-                            <li><a href="#">Приставы и коллекторы</a></li>
-                            <li><a href="#">Кредиты и микрозаймы</a></li>
-                        </ul>
-                        <ul class="footer__list">
+                        <div class="list list--footer-links">
+                            <h4 class="list__title">Услуги</h4>
+                            <ul>
+                                <li class="list__item"><a href="#">Услуги по банкротству</a></li>
+                                <li class="list__item"><a href="#">Стоимость банкротства</a></li>
+                                <li class="list__item"><a href="#">Приставы и коллекторы</a></li>
+                                <li class="list__item"><a href="#">Кредиты и микрозаймы</a></li>
+                            </ul>
+                        </div>
+
+                        <ul class="list list--footer-links">
                             <li class="footer__list-title">Медиа</li>
                             <li><a href="#">Мы в СМИ</a></li>
                             <li><a href="#">Новости</a></li>
                             <li><a href="#">Статьи</a></li>
                             <li><a href="#">Блог</a></li>
                         </ul>
-                        <ul class="footer__list">
+                        <ul class="list list--footer-links">
                             <li class="footer__list-title">О нас</li>
                             <li><a href="#">О компании</a></li>
                             <li><a href="#">Отзывы клиентов</a></li>
@@ -941,7 +947,7 @@
                             <li><a href="#">Вакансии</a></li>
                         </ul>
                         <div class="footer__item">
-                            <ul class="footer__list">
+                            <ul class="list list--footer-links">
                                 <li><a href="">Франшиза</a></li>
                                 <li><a href="">Программа лояльности</a></li>
                             </ul>
@@ -951,13 +957,13 @@
                     </div>
                     <div class="footer__bottom">
                         <p>© 2023. ООО «Юридическая группа «Делу время». Правовое обслуживание. Политика конфиденциальности.</p>
-                        <div class="footer__icon">
-                            <img src="./assets/svg/icon-social-1.svg" alt="">
-                            <img src="./assets/svg/icon-social-2.svg" alt="">
-                            <img src="./assets/svg/icon-social-3.svg" alt="">
-                            <img src="./assets/svg/icon-social-4.svg" alt="">
-                            <img src="./assets/svg/icon-social-5.svg" alt="">
-                            <img src="./assets/svg/icon-social-6.svg" alt="">
+                        <div class="socials">
+                            <img class="socials__item" src="./assets/svg/icon-social-1.svg" alt="">
+                            <img class="socials__item" src="./assets/svg/icon-social-2.svg" alt="">
+                            <img class="socials__item" src="./assets/svg/icon-social-3.svg" alt="">
+                            <img class="socials__item" src="./assets/svg/icon-social-4.svg" alt="">
+                            <img class="socials__item" src="./assets/svg/icon-social-5.svg" alt="">
+                            <img class="socials__item" src="./assets/svg/icon-social-6.svg" alt="">
                         </div>
                     </div>
 

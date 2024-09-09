@@ -24,7 +24,6 @@ body,
     margin: 0;
 }
 
-
 /**
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
@@ -163,12 +162,16 @@ svg * {
     }
 }
 
+
+/* Общие стили */
+
 /* Переменные */
 :root {
     --color-primary-500: #3173F2;
     --color-primary-400: #6999F5;
     --color-secondary-600: #3666C2;
     --color-info-500: #3B82F6;
+
     --color-text: #1D1919;
     --color-text-gray-50: #F9FAFB;
     --color-text-gray-100: #EFF0F6;
@@ -182,8 +185,6 @@ svg * {
     --color-yellow-400: #FBBF24;
 
     --color-green-500: #10B981;
-    
-    
 }
 
 @font-face {
@@ -194,63 +195,34 @@ svg * {
  }
 
 @font-face {
-      font-family: "Golos UI";
-      src: url(../font/golos-ui_medium.ttf) format("ttf");
-      font-style: normal;
-      font-display: swap;
+    font-family: "Golos UI";
+    src: url(../font/golos-ui_medium.ttf) format("ttf");
+    font-style: normal;
+    font-display: swap;
   }
 
 @font-face {
-       font-family: "Golos UI";
-       src: url(../font/golos-ui_regular.ttf) format("ttf");
-       font-style: normal;
-       font-display: swap;
+    font-family: "Golos UI";
+    src: url(../font/golos-ui_regular.ttf) format("ttf");
+    font-style: normal;
+    font-display: swap;
    }
 
 body {
     font-family: "Golos UI", Roboto, sans-serif;
     color: var(--color-text);
-    
 }
 
-h2 {
+.h1 {
+    font-size: 48px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.h2 {
     font-size: 32px;
     margin: 0;
     line-height: 1.2;
-
-}
-
-header.header {
-    display: flex;
-    height: 88px;
-    justify-content: center;
-}
-
-.container {
-    display: flex;
-    width: 1312px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-a.logo.header__logo {
-    display: block;
-    width: 333px;
-}
-
-.header__left {
-    display: flex;
-    align-items: center;
-}
-
-.header_centr {
-    display: flex;
-    align-items: center;
-}
-
-.header_right {
-    display: flex;
-    align-items: center;
 }
 
 .button {
@@ -265,7 +237,6 @@ a.logo.header__logo {
     background-color: var(--color-primary-500);
     justify-content: center;
     padding: 20px 32px 22px 32px;
-    
 }
 
 .button--size-lg {
@@ -282,27 +253,22 @@ button:hover {
     cursor: pointer;
 }
 
-.button--link {
-    height: 24px;
-    color: var(--color-primary-500);
-    width: 104px;
-    height: 40px;
+.button--transparent {
+    background-color: transparent;
+    color: var(--color-text);
 }
 
-.button--with-icon {
-    padding: 0;
-    width: auto;
-    margin-right: 32px;
-    background-color: transparent;
+.button--transparent:hover {
+    background-color: var(--color-text-gray-100);
+}
+
+.button--with-icon img {
+    margin-right: 6px;
 }
 
 .button--with-icon:hover {
-    color: var(--color-primary-400); 
+    color: var(--color-primary-400);
     background-color: transparent;
-}
-
-.button--with-icon p {
-    margin-left: 6px;
 }
 
 .button--dropdown {
@@ -317,9 +283,9 @@ button:hover {
     cursor: pointer;
 }
 
-.button--primary  {
+.button--primary {
     background-color: var(--color-primary-500);
-    color:white;
+    color: white;
 }
 
 .button--arrow {
@@ -357,27 +323,108 @@ button:hover {
     background-color: var(--color-text-gray-100);
 }
 
-.header_centr .button--dropdown {
-    margin-right: 32px;
-}
-
-.menu__item {
+.link {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
     font-weight: 500;
-}
-
-.menu__item:not(:last-child)  {
-    margin-right: 32px;
-}
-
-a:visited {
     color: var(--color-text);
 }
 
-a.phone-link.phone-link--primary {
+.link--active {
+    color: var(--color-primary-500);
+}
+
+.link--with-icon img {
+    margin-right: 6px;
+}
+
+.link--with-icon:hover {
+    color: var(--color-secondary-600);
+}
+
+.logo {
+    display: block;
+    cursor: pointer;
+    width: 413px;
+    height: 58px;
+}
+
+.phone-link {
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
+}
+
+.phone-link:hover {
+    color: var(--color-secondary-600);
+}
+
+.phone-link--md {
+    font-size: 16px;
+}
+
+.phone-link--lg {
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1312px;
+    padding-top: 124px;
+}
+/* Общие стили */
+
+
+
+
+
+
+
+
+.header {
+    display: flex;
+    height: 88px;
+    justify-content: center;
+}
+
+.header .container {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 0;
+}
+
+.header__logo {
+    width: 333px;
+    height: 43px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__center {
+    display: flex;
+    align-items: center;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+
+.header__center .button--dropdown {
+    margin-right: 32px;
+}
+
+.link:not(:last-child)  {
+    margin-right: 32px;
 }
 
 .breadcrumb {
@@ -387,28 +434,29 @@ a.phone-link.phone-link--primary {
     margin: 32px auto;
 }
 
-.container-breadcrumb {
-    display: flex;
-    width: 1312px;
+.breadcrumb .container {
+    flex-direction: row;
+    padding: 0;
     font-size: 12px;
+    display: flex;
     align-items: center;
-    color: var(--color-primary-500);
 }
 
 .breadcrumb a {
     text-decoration: none;
+    color: var(--color-text-gray-500);
 }
 
-.breadcrumb p::after {
+.breadcrumb span {
+    color: var(--color-primary-500);
+}
+
+.breadcrumb a::after {
     margin: 0 11px;
     content: url(../svg/icon-arrow-breadcrumb.svg); 
 }
 
-.breadcrumb p {
-    color: var(--color-text-gray-500);
-}
-
-.banner {
+.banner-section {
     display: flex;
     justify-content: center;
     height: 618px;
@@ -416,16 +464,11 @@ a.phone-link.phone-link--primary {
     border-radius: 0 0 32px 32px;
 }
 
-.container-banner {
-    /* display: flex; */
-    /* flex-direction: column; */
+.banner-section .container {
     width: 1312px;
     padding-left: 112px;
-}
-
-.banner h2 {
-    width: 623px;
-    margin: 89px 0 0 0;
+    padding-top: 89px;
+    align-items: flex-start;
 }
 
 .banner__list {
@@ -438,14 +481,14 @@ a.phone-link.phone-link--primary {
     margin-left: 36px;
 }
 
-.banner p {
+.banner-section p {
     font-size: 24px;
     width: 623px;
     margin: 24px 0 0 0;
     line-height: 1.4;
 }
 
-.banner button {
+.banner-section button {
     margin-top: 49px;
 }
 
@@ -453,7 +496,6 @@ a.phone-link.phone-link--primary {
     position: absolute;
     right: 230px;
     top: 176px;
-    
 }
 
 .triggers {
@@ -1616,15 +1658,6 @@ label.radio {
     margin-right: 4px;
 }
 
-.button--transparent {
-    background-color: white;
-    color: var(--color-text);
-}
-
-.button--transparent:hover {
-    background-color: var(--color-text-gray-100);
-}
-
 .review-cards {
     display: flex;
     align-items: center;
@@ -2029,9 +2062,6 @@ label.radio {
     border-radius: 24px;
 }
 
-.phone-link--big {
-    font-size: 24px;
-}
 
 .footer__info {
     font-size: 14px;

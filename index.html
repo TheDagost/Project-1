@@ -9,39 +9,37 @@
     <header class="header">
         <div class="container">
             <div class="header__left">
-                <a class="logo header__logo"><img src="./assets/img/logo.png" alt="Не удалость загрущить логотип"></a>
+                <a class="logo header__logo" href="#"><img src="./assets/img/logo.png" alt="Не удалость загрущить логотип"></a>
             </div>
-
-            <div class="header_centr">
+            <div class="header__center">
                 <button class="button button--dropdown button--primary">Услуги</button>
                 <nav class="menu">
-                    <a class="menu__item menu__item--active" href="">Оплата</a>
-                    <a class="menu__item" href="">Медиа</a>
-                    <a class="menu__item" href="">О нас</a>
-                    <a class="menu__item" href="">Контакты</a>
+                    <a class="link link--active" href="#">Оплата</a>
+                    <a class="link" href="#">Медиа</a>
+                    <a class="link" href="#">О нас</a>
+                    <a class="link" href="#">Контакты</a>
                 </nav>
             </div>
-
-            <div class="header_right">
-                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-search.svg" alt=""><p>Поиск</p></button>
-                <button class="button button--link button--with-icon"><img src="./assets/svg/icon-map.svg" alt=""><p>Москва</p></button>
-                <a class="phone-link phone-link--primary" href="tel:+7-(499)-112-33-49">+7 (499) 112 33 49</a>
+            <div class="header__right">
+                <a class="link link--with-icon link--active" href="#"><img src="./assets/svg/icon-search.svg" alt="">Поиск</a>
+                <a class="link link--with-icon link--active" href="#"><img src="./assets/svg/icon-map.svg" alt="">Москва</a>
+                <a class="phone-link phone-link--md" href="tel:+7-(499)-112-33-49">+7 (499) 112 33 49</a>
             </div>
         </div>
     </header>
 
     <div class="breadcrumb">
-        <nav class="container-breadcrumb">
-            <a href=""><p>Главная</p></a>
-            <a href=""><p>Услуги</p></a>
+        <nav class="container">
+            <a href="#">Главная</a>
+            <a href="#">Услуги</a>
             <span>Банкротство физических лиц</span>
         </nav>
     </div>
 
-    <section class="banner">
-        <div class="container-banner">
-            <h2>Банкротство физических лиц <br>в Москве</h2>
-            <ul class="banner__list">
+    <section class="banner-section">
+        <div class="container">
+            <h2 class="h2">Банкротство физических лиц <br>в Москве</h2>
+            <ul class="list banner__list">
                 <li>Юридическая гарантия списания долга в договоре</li>
                 <li>Избавляем вас от общения с коллекторам <br> и приставами</li>
                 <li>Рассрочка до 2 лет, минимальным платежом 6792 ₽</li>
@@ -903,7 +901,7 @@
             <div class="container__footer">
                 <div class="footer__left">
                     <div class="footer__left-item">
-                        <a class="phone-link phone-link--primary phone-link--big" href="tel:+7-(499)-112-33-49">+7 (499) 112 33 49</a>
+                        <a class="phone-link phone-link--lg" href="tel:+7-(499)-112-33-49">+7 (499) 112 33 49</a>
                         <p class="footer__info">Звоните нам с 8:00 до 22:00</p>
                     </div>
                     <div class="footer__left-item">
@@ -965,9 +963,5 @@
             </div>
         </div>
     </footer>
-   
-
-
-
 </body>
 </html>

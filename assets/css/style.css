@@ -225,6 +225,10 @@ body {
     line-height: 1.2;
 }
 
+.h3 {
+    font-size: 24px;
+}
+
 .button {
     display: flex;
     border: none;
@@ -374,6 +378,141 @@ button:hover {
     width: 1312px;
     padding-top: 124px;
 }
+
+.title-block__button {
+    display: flex;
+    align-items: center;
+}
+
+.title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.title-block__button .button--size-md {
+    margin-right: 24px;
+}
+
+.title-block__buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.title-block__tabs {
+    display: flex;
+    padding: 4px;
+    border: 1px solid var(--color-text-gray-300);
+    border-radius: 10px;
+}
+
+.title-block__tabs .button--size-md:not(:last-child) {
+    margin-right: 4px;
+}
+
+/* стилизация radio */
+.radio__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+}
+
+.radio__dot {
+    position: relative;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+}
+
+.radio__dot:before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CDD1DA;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+.radio__dot:after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    transition: .2s;
+}
+
+/* активировали точку*/
+.radio__input:checked+.radio__dot:after {
+    opacity: 1;
+}
+
+/* делаем bg синей*/
+.radio__input:checked+.radio__dot:before {
+    background-color: var(--color-primary-500);
+    border: 0;
+}
+
+/* делаем bg у before border, чтобы получить hover при неактивной кнопке*/
+.radio__input:hover+.radio__dot:before {
+    border: 1px solid var(--color-primary-500);
+
+}
+
+/* делаем hover активной кнопке через другой родительский класс тк дочерний уже заняти выше*/
+.radio:hover .radio__input:checked+.radio__dot:before {
+    opacity: 1;
+    background-color: var(--color-primary-400);
+    border: 0;
+}
+
+/* убирает стрелочки по умолчанию в input type */
+/* Chrome, Safari, Edge, Opera */
+.input--number::-webkit-inner-spin-button,
+.input--number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input--number::-ms-clear {
+    display: none;
+}
+
+.input {
+    border-radius: 8px;
+    border: 1px solid var(--color-text-gray-300);
+    font-family: inherit;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+}
+
+.input::placeholder {
+    color: var(--color-text-gray-400);
+}
+
+.input:focus {
+    outline: 2px solid var(--color-primary-500);
+}
+
+.button--minus-plus {
+    background-color: #ffffff;
+}
+
+.button--minus-plus:hover {
+    background-color: var(--color-text-gray-50);
+}
+
 /* Общие стили */
 
 
@@ -488,7 +627,7 @@ button:hover {
     line-height: 1.4;
 }
 
-.banner-section button {
+.banner-section .button {
     margin-top: 49px;
 }
 
@@ -498,35 +637,28 @@ button:hover {
     top: 176px;
 }
 
-.triggers {
+.triggers-section {
     display: flex;
     justify-content: center;
     height: 600px;
 }
 
-.container-triggers {
-    display: flex;
-    flex-direction: column;
-    width: 1312px;
-    padding-top: 124px;
-}
-
-.triggers p {
+.cards__item-description {
     font-size: 24px;
     line-height: 1.4;
 }
 
- .triggers h2 {
+.triggers-section .h2 {
     margin-bottom: 17px;
- }
+}
 
- .cards {
+.cards {
     display: flex;
     justify-content: space-between;
     margin: 32px 0 0 0;
- }
+}
 
- .cards__item-1 {
+.cards__item {
     height: 322px;
     width: 304px;
     background: #F9FAFB;
@@ -535,13 +667,13 @@ button:hover {
     padding-left: 40px;
     transition-timing-function: ease-in-out;
     transition-duration: 0.2s;
- }
+}
 
-.cards__item-1:hover {
+.cards__item:hover {
     scale: 1.08;
 }
 
- .cards__icon {
+ .cards__item-icon {
     display: flex;
     width: 52px;
     height: 48px;
@@ -551,28 +683,21 @@ button:hover {
     align-items: center;
  }
 
- .cards__tittle {
+ .cards__item-tittle {
     font-size: 48px;
     font-weight: 600;
     margin-top: 48px;
  }
 
- .cards__tittle span {
+ .cards__item-tittle span {
     font-size: 32px;
     margin-left: 5px;
  }
 
-.grade {
+.grade-section {
     display: flex;
     justify-content: center;
     height: 424px;
-}
-
-.container-grade {
-    display: flex;
-    flex-direction: column;
-    width: 1312px;
-    padding-top: 124px;
 }
 
 .grade__tittle {
@@ -634,10 +759,13 @@ p.grade__name {
     margin-top: 8px;
 }
 
-span.grade__rating {
+.grade__rating {
     display: flex;
     align-items: center;
-    margin-top: 17px;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 13px;
 }
 
 .stars {
@@ -646,32 +774,21 @@ span.grade__rating {
     margin-left: 8px;
 }
 
-.grade__rating p {
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0;
-}
-
 .stars img:not(:last-child) {
     margin-right: 8px;
 }
 
-p.grade__review {
-    margin-top: 3px;
+.grade__review {
     color: var(--color-info-500);
 }
 
-.info {
+.info-section {
     display: flex;
     justify-content: center;
     height: 820px;
 }
 
-.container-info {
-    display: flex;
-    flex-direction: column;
-    width: 1312px;
-    padding-top: 124px;
+.info-section .container {
     flex-wrap: wrap;
     align-content: space-between;
 }
@@ -684,60 +801,40 @@ p.grade__review {
     margin-bottom: 48px;
 }
 
-.info__tittle h2 {
+.info__tittle .h2 {
     margin-bottom: 32px;
 }
 
-.info__tittle p:nth-child(2) {
-    margin-bottom: 26px;
+.info__tittle span {
+    display: block;
+    margin-bottom: 19px;
+    font-weight: 600;
 }
-    
-/* .info__list-1 {
-    list-style-image: url(../svg/list/list-1.svg);
-}
-
-.info__list-2 {
-    list-style-image: url(../svg/list/list-2.svg);
-}
-
-.info__list-3 {
-    list-style-image: url(../svg/list/list-3.svg);
-}
-
-.info__list-4 {
-    list-style-image: url(../svg/list/list-4.svg);
-}
-
-.info__list-5 {
-    list-style-image: url(../svg/list/list-5.svg);
-} */
-
 
 /* счетчик */
-.numbers {
-    counter-reset: numbers-item 0;
+.bancrot-list {
+    counter-reset: bancrot-list-item 0;
     margin-top: 41px; 
 }
 
-.numbers-item {
-    counter-increment: numbers-item 1;
+.bancrot-list-item {
+    counter-increment: bancrot-list-item 1;
     position: relative;
-    
 }
 
-.numbers-item:not(:last-child) {
+.bancrot-list-item:not(:last-child) {
     margin-bottom: 40px;
 }
 
-.numbers li {
+.bancrot-list li {
     padding-left: 56px;
 }
 
-.numbers-item::before {
+.bancrot-list-item::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    content: counter(numbers-item);
+    content: counter(bancrot-list-item);
     height: 40px;
     width: 40px;
     background-color: #F4F6FB;
@@ -756,24 +853,13 @@ p.grade__review {
     margin-top: 33px;
 }
 
-.info__tittle span {
-    font-weight: 600;
-}
-
-.calculator {
+.calculator-section {
     display: flex;
     justify-content: center;
     height: 1037px;
 }
 
-.container-calculator {
-    display: flex;
-    flex-direction: column;
-    width: 1312px;
-    padding-top: 124px;
-}
-
-.calculator__status {
+.form-navigation {
     display: flex;
     height: 140px;
     background-color: var(--color-text-gray-50);
@@ -786,7 +872,7 @@ p.grade__review {
     position: relative;
 }
 
-.calculator__p {
+.form-navigation__steps {
     position: absolute;
     font-size: 14px;
     color: var(--color-text-gray-500);
@@ -794,181 +880,68 @@ p.grade__review {
     bottom: 22px;
 }
 
-
-.rectangle {
+.form-navigation-rectangle {
     height: 6px;
     width: 270px;
     background: var(--color-text-gray-400);
     border-radius: 10px;
 }
 
-.calculator__status-item {
+.form-navigation-item {
     height: 40px;
 }
 
-.calculator__status-item p {
+.form-navigation-item p {
     text-align: center;
     margin-bottom: 15px;
 }
 
-.calculator__status .calculator__status-item:not(:first-child) {
+.form-navigation .form-navigation-item:not(:first-child) {
     color: var(--color-text-gray-500);
 }
 
-.rectangle--active {
+.form-navigation-rectangle--active {
     background-color: var(--color-primary-500);
 }
 
-.calculator__form {
+.form--calculator {
     height: 649px;
     background-color: var(--color-text-gray-50);
     border-radius: 24px;
     padding: 40px 0 0 60px;
 }
 
-.calculator__question {
+.radio-group {
     margin: 24px 0;
     display: flex;
     flex-direction: column;
 }
 
-.calculator__quantity {
-    display: flex;
-}
-
-.calculator__question label {
+.radio-group label {
     margin-top: 13px;
 }
 
-/* input.radio {
-    margin: 0 8px 0 0;
-} */
-
 label.radio {
-       display: flex;
-       align-items: center;
-       width: 624px;
+    display: flex;
+    align-items: center;
+    width: 624px;
 }
 
-/* стилизация radio */
-.radio__input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    margin: 10px 0 0 7px;
+.counter {
+    display: flex;
 }
 
-.radio__dot {
-    position: relative;
-    padding: 0 0 0 24px;
-    cursor: pointer;
+.counter-group {
+    margin-bottom: 36px;
 }
 
-.radio__dot:before {
-    content: '';
-    position: absolute;
-    top: -9px;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #CDD1DA;
-    border-radius: 50%;
-    background: #FFF;
-}
-
-.radio__dot:after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: 6px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: white;
-    opacity: 0;
-    transition: .2s;
-}
-
-/* активировали точку*/
-.radio__input:checked + .radio__dot:after {
-    opacity: 1;
-}
-
-/* делаем bg синей*/
-.radio__input:checked + .radio__dot:before {  
-    background-color: var(--color-primary-500);
-    border: 0;
-}
-
-/* делаем bg у before border, чтобы получить hover при неактивной кнопке*/
-.radio__input:hover + .radio__dot:before {
-    border: 1px solid var(--color-primary-500);
-    
-}
-
-/* делаем hover активной кнопке через другой родительский класс тк дочерний уже заняти выше*/
-.radio:hover .radio__input:checked+.radio__dot:before {
-    opacity: 1;
-    background-color: var(--color-primary-400);
-    border: 0;
-}
-
-/* убирает стрелочки по умолчанию в input type */
-/* Chrome, Safari, Edge, Opera */
-.input--number::-webkit-inner-spin-button,
-.input--number::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.input--number::-ms-clear {
-    display: none;
-}
-
-.input {
-    border-radius: 8px;
-    border: 1px solid var(--color-text-gray-300);
-    font-family: inherit;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 12px;
-}
-
-.input::placeholder {
-    color: var(--color-text-gray-400);
-}
-
-.input:focus {
-    outline: 2px solid var(--color-primary-500);
-}
-
-.button--minus-plus {
-    background-color: #ffffff;
-}
-
-.button--minus-plus:hover {
-    background-color: var(--color-text-gray-50);
-}
-
-.calculator__quantity {
+.counter {
     margin-top: 12px;
 }
 
-.calculator__quantity input {
+.counter input {
     width: 48px;
     margin: 0 8px 0 8px;
-}
-
-.calculator__form-title {
-    margin-left: 12px;
-}
-
-.calculator__question-h3 {
-    font-size: 24px;
-}
-
-.calculator__form .button--size-lg {
-    margin-top: 12px;
 }
 
 .profit {
@@ -1249,22 +1222,6 @@ label.radio {
     flex-direction: column;
     width: 1312px;
     padding-top: 119px;
-}
-
-.title-block__button {
-    display: flex;
-    align-items: center;
-}
-
-.title-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-}
-
-.title-block__button .button--size-md {
-    margin-right: 24px;
 }
 
 .case_content {
@@ -1638,24 +1595,6 @@ label.radio {
     width: 1312px;
     padding-top: 124px;
 
-}
-
-.title-block__buttons {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: 16px;
-}
-
-.title-block__tabs {
-    display: flex;
-    padding: 4px;
-    border: 1px solid var(--color-text-gray-300);
-    border-radius: 10px;
-}
-
-.title-block__tabs .button--size-md:not(:last-child) {
-    margin-right: 4px;
 }
 
 .review-cards {

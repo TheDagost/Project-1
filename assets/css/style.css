@@ -382,8 +382,10 @@ button:hover {
 .container {
     display: flex;
     flex-direction: column;
-    width: 1312px;
+    width: 1376px;
     padding-top: 124px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .title-block__button {
@@ -560,6 +562,21 @@ button:hover {
 }
 /* Общие стили */
 
+/* Адаптив*/
+
+    /* @media (min-width: 1000px) {
+        .container {
+            padding: 0 32px;
+        }
+    } */
+
+
+
+
+
+
+
+
 .header {
     display: flex;
     height: 88px;
@@ -613,7 +630,7 @@ button:hover {
 
 .breadcrumb .container {
     flex-direction: row;
-    padding: 0;
+    padding-top: 0;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -1450,10 +1467,16 @@ label.radio {
 }
 
 .feedback-section .container {
-    padding: 88px 0 88px 30px;
+    padding-top: 88px;
+    padding-bottom: 88px;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+}
+
+.feedback__img {
+    position: relative;
+    left: 29px;
 }
 
 .feedback-form {
@@ -1700,16 +1723,17 @@ label.radio {
 
 .guarantee-section .container {
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 124px;
     background-color: var(--color-text-gray-50);
     border-radius: 24px;
     padding-top: 0;
+    width: 1312px;
+    padding-right: 0;
 }
 
 .guarantee__right {
     width: 592px;
-    margin: 105px 0 0 80px;
+    margin: 105px 0 0 48px;
 }
 
 .guarantee__left {
@@ -1870,7 +1894,7 @@ label.radio {
 .footer .container {
     flex-direction: row;
     justify-content: space-between;
-    padding: 64px 0 0 0;
+    padding: 64px 32px 0 32px;
 }
 
 .feedback-footer {

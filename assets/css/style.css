@@ -250,6 +250,19 @@ body {
     padding: 20px 32px 22px 32px;
 }
 
+.button--icon {
+    background-image: url(../svg/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 14px left 16px;
+    padding: 9px 16px 9px 36px;
+}
+
+.button--icon-sm {
+    background-repeat: no-repeat;
+    background-position: bottom 6px left 11px;
+    padding: 4px 12px 4px 30px;
+}
+
 .button--size-lg {
     padding: 12px 28px;
 }
@@ -257,6 +270,10 @@ body {
 .button--size-md {
     padding: 9px 16px 10px 16px;
     font-size: 14px;
+}
+
+.button--size-sm {
+    padding: 4px 12px;
 }
 
 button:hover {
@@ -282,14 +299,7 @@ button:hover {
     background-color: transparent;
 }
 
-.button--dropdown {
-    background-image: url(../svg/icon-menu.svg);
-    background-repeat: no-repeat;
-    background-position: bottom 14px left 16px;
-    padding: 9px 16px 9px 36px;
-}
-
-.button--dropdown:hover {
+.button--icon:hover {
     background-color: var(--color-secondary-600);
     cursor: pointer;
 }
@@ -336,6 +346,7 @@ button:hover {
 
 .link {
     display: flex;
+    align-items: center;
     flex-direction: row;
     text-decoration: none;
     font-weight: 500;
@@ -348,6 +359,8 @@ button:hover {
 
 .link--with-icon img {
     margin-right: 6px;
+    width: 16px;
+    height: 16px;
 }
 
 .link--with-icon:hover {
@@ -357,8 +370,8 @@ button:hover {
 .logo {
     display: block;
     cursor: pointer;
-    width: 413px;
-    height: 58px;
+    width: 333px;
+    height: 43px;
 }
 
 .phone-link {
@@ -382,7 +395,8 @@ button:hover {
 .container {
     display: flex;
     flex-direction: column;
-    width: 1376px;
+    max-width: 1376px;
+    width: 100%;
     padding-top: 124px;
     padding-left: 32px;
     padding-right: 32px;
@@ -562,21 +576,6 @@ button:hover {
 }
 /* Общие стили */
 
-/* Адаптив*/
-
-    /* @media (min-width: 1000px) {
-        .container {
-            padding: 0 32px;
-        }
-    } */
-
-
-
-
-
-
-
-
 .header {
     display: flex;
     height: 88px;
@@ -587,11 +586,6 @@ button:hover {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 0;
-}
-
-.header__logo {
-    width: 333px;
-    height: 43px;
 }
 
 .header__left {
@@ -609,16 +603,93 @@ button:hover {
     align-items: center;
 }
 
-.menu {
+.header .menu {
     display: flex;
 }
 
-.header__center .button--dropdown {
+.header__center .button--icon {
     margin-right: 32px;
 }
 
-.link:not(:last-child)  {
+.header .link:not(:last-child)  {
     margin-right: 32px;
+}
+
+#menu-container {
+    display: none;
+}
+
+#menu-button {
+    display: flex;
+    margin-left: 48px;
+    font-size: 14px;
+    background-image: url(../svg/icon-menu-sm.svg);
+}
+
+#phone-button{
+    display: block;
+    margin-left: 8px;
+    
+}
+
+.button--phone {
+    background-image: url(../svg/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+}
+
+#header-details-container {
+    display: none;
+}
+
+@media (max-width: 770px) {
+    #menu-button {
+        margin-left: 8px;   
+    }
+}
+
+@media (max-width: 870px) {
+    #header-details-container a {
+        font-size: 14px;
+    }
+
+    .header__logo {
+        width: 230px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    #header-details-container {
+        display: flex;
+    }
+    #phone-button {
+        display: none;
+    }
+}
+
+@media (min-width: 1240px) {
+    #menu-container {
+        display: flex;
+        align-items: center;
+    }
+    #menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .header .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header__logo {
+        width: 205px;
+        height: 32px;
+    }
 }
 
 .breadcrumb {
@@ -650,6 +721,13 @@ button:hover {
     content: url(../svg/icon-arrow-breadcrumb.svg); 
 }
 
+@media (max-width: 420px) {
+    .breadcrumb .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 .banner-section {
     display: flex;
     justify-content: center;
@@ -669,7 +747,6 @@ button:hover {
     list-style-position: outside;
     list-style-type: disc;
     margin-top: 24px;
-    width: 623px;
     font-size: 24px;
     line-height: 1.4;
     margin-left: 36px;
@@ -677,7 +754,6 @@ button:hover {
 
 .banner-section p {
     font-size: 24px;
-    width: 623px;
     margin: 24px 0 0 0;
     line-height: 1.4;
 }
@@ -690,6 +766,32 @@ button:hover {
     position: absolute;
     right: 230px;
     top: 176px;
+}
+
+@media (max-width: 870px) {
+    .banner-section .container {
+        padding-left: 32px;
+        padding-top: 66px;
+    }
+    .banner__list {
+        font-size: 16px;
+    }
+    .banner-section p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .banner-section .h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .banner-section .button {
+        width: 100%;
+    }
 }
 
 .triggers-section {

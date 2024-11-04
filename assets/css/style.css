@@ -813,11 +813,12 @@ button:hover {
     display: flex;
     justify-content: space-between;
     margin: 32px 0 0 0;
+    gap: 32px;
 }
 
 .cards__item {
     height: 322px;
-    width: 304px;
+    width: 100%;
     background: #F9FAFB;
     border-radius: 32px;
     padding-top: 44px;
@@ -830,7 +831,7 @@ button:hover {
     scale: 1.08;
 }
 
- .cards__item-icon {
+.cards__item-icon {
     display: flex;
     width: 52px;
     height: 48px;
@@ -840,15 +841,47 @@ button:hover {
     align-items: center;
  }
 
- .cards__item-tittle {
+.cards__item-tittle {
     font-size: 48px;
     font-weight: 600;
     margin-top: 48px;
 }
 
- .cards__item-tittle span {
+.cards__item-tittle span {
     font-size: 32px;
     margin-left: 5px;
+}
+
+.card-group {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+
+@media (max-width: 420px) {
+    .triggers-section .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .triggers-section .card-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 610px) {
+    .triggers-section .cards {
+        flex-wrap: wrap;
+    }
+
+    .triggers-section .h2 {
+        font-size: 24px;
+    }
+    .triggers__text .cards__item-description {
+        font-size: 16px;
+    }
 }
 
 .grade-section {

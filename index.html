@@ -94,7 +94,7 @@
             </div>
         </div>
     </section>
-<!-- 
+
     <section class="grade-section">
         <div class="container">
             <div class="title-block">
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="grade__content">
-                <div class="grade__text"><p>Юридическая группа<br>«Делу время»<br>на популярных сторонних <br>площадках</p></div>
+                <div class="grade__text">Юридическая группа <br class=" hide-on-mobile-460">«Делу время»<br>на популярных сторонних <br class="hide-on-mobile">площадках</div>
                 <div class="grade__card">
                     <div class="grade__item">
                         <img src="./assets/svg/icon-yandex.svg" alt="">
@@ -177,7 +177,7 @@
                 </div>
             </div>
             <div class="info__right">
-                <img src="./assets/img/img_info.png" alt="Договор">
+                <!-- <img src="./assets/img/img_info.png" alt="Договор"> -->
             </div>
         </div>
     </section>
@@ -186,21 +186,27 @@
         <div class="container">
             <h2 class="h2">Калькулятор стоимости<br>банкротства физических лиц</h2>
             <div class="form-navigation">
-                <div class="form-navigation-item">
-                    <p>1. Сумма долга</p>
-                    <div class="form-navigation-rectangle form-navigation-rectangle--active"></div>
-                </div>
-                <div class="form-navigation-item">
-                    <p>2. Семейное положение</p>
-                    <div class="form-navigation-rectangle"></div>
-                </div>
-                <div class="form-navigation-item">
-                    <p>3. Обязательства</p>
-                    <div class="form-navigation-rectangle"></div>
-                </div>
-                <div class="form-navigation-item">
-                    <p>4. Предварительный итог</p>
-                    <div class="form-navigation-rectangle"></div>
+                <div class="form-navigation__items">
+                    <div class="form-navigation-item">
+                        <div class="navigation-item-title-number">1.</div>
+                        <div class="navigation-item-title">1. Сумма долга</div>
+                        <div class="form-navigation-rectangle form-navigation-rectangle--active"></div>
+                    </div>
+                    <div class="form-navigation-item">
+                        <div class="navigation-item-title-number">2.</div>
+                        <div class="navigation-item-title">2. Семейное положение</div>
+                        <div class="form-navigation-rectangle"></div>
+                    </div>
+                    <div class="form-navigation-item">
+                        <div class="navigation-item-title-number">3.</div>
+                        <div class="navigation-item-title">3. Обязательства</div>
+                        <div class="form-navigation-rectangle"></div>
+                    </div>
+                    <div class="form-navigation-item">
+                        <div class="navigation-item-title-number">4.</div>
+                        <div class="navigation-item-title">4. Предварительный итог</div>
+                        <div class="form-navigation-rectangle"></div>
+                    </div>
                 </div>
                 <p class="form-navigation__steps">1 из 4</p>
             </div>
@@ -254,26 +260,33 @@
             <h2 class="h2">Чем выгодно банкроство?</h2>
             <div class="profit-block">
                 <div class="profit-block__plus">
-                    <div class="profit-block__item profit-block__item--plus">
-                        <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
-                        <h3 class="h3">Долгожданное спокойствие</h3>
-                        <p class="profit-block__description profit-block__description--plus">Ни банки, ни коллекторы больше не будут досаждать</p>
+                    <div class="profit-block__items">
+                        <div class="profit-block__item profit-block__item--plus">
+                            <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
+                            <h3 class="h3">Долгожданное спокойствие</h3>
+                            <p class="profit-block__description profit-block__description--plus">Ни банки, ни коллекторы больше не будут досаждать</p>
+                        </div>
+                        <div class="profit-block__item profit-block__item--plus">
+                            <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
+                            <h3 class="h3">Освобождение имущества и счетов</h3>
+                            <p class="profit-block__description profit-block__description--plus">Приостановление исполнительных производств</p>
+                        </div>
                     </div>
-                    <div class="profit-block__item profit-block__item--plus">
-                        <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
-                        <h3 class="h3">Освобождение имущества и счетов</h3>
-                        <p class="profit-block__description profit-block__description--plus">Приостановление исполнительных производств</p>
-                     </div>
-                    <div class="profit-block__item profit-block__item--plus">
-                        <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
-                        <h3 class="h3">Все долги замораживаются</h3>
-                        <p class="profit-block__description profit-block__description--plus">Остановка начисления процентов и штрафов</p>
+
+                    <div class="profit-block__items">
+                        <div class="profit-block__item profit-block__item--plus">
+                            <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
+                            <h3 class="h3">Все долги замораживаются</h3>
+                            <p class="profit-block__description profit-block__description--plus">Остановка начисления процентов и штрафов</p>
+                        </div>
+                        <div class="profit-block__item profit-block__item--plus">
+                            <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
+                            <h3 class="h3">Списание долгов</h3>
+                            <p class="profit-block__description profit-block__description--plus">Списание долгов после окончания процедуры банкротства</p>
+                        </div>
                     </div>
-                    <div class="profit-block__item profit-block__item--plus">
-                        <img class="profit-block__img" src="./assets/svg/icon-plus-big.svg" alt="">
-                        <h3 class="h3">Списание долгов</h3>
-                        <p class="profit-block__description profit-block__description--plus">Списание долгов после окончания процедуры банкротства</p>
-                    </div>
+
+
                 </div>
                 <div class="profit-block__minus">
                      <div class="profit-block__item profit-block__item--minus">
@@ -296,7 +309,7 @@
         </div>
     </section>
 
-    <section class="steps-section">
+    <!-- <section class="steps-section">
         <div class="container">
             <h2 class="h2">5 простых шагов к списанию долгов</h2>
             <div class="steps">
@@ -383,10 +396,10 @@
                     <p class="steps__p">
                         По завершении работы нашего финансового управляющего,<br>по решению суда все ваши долговые обязательства законно списываются
                 </div>
-                <div class="steps__line"></div>
+                
             </div>
         </div>
-    </section >
+    </section > -->
 
     <section class="case-section">
         <div class="container">
@@ -480,6 +493,10 @@
                     <a class="case__link" href="">Подробнее</a>
                 </div>
             </div>
+            <div class="button-mobile">
+                <button class="button button--tertiary button--size-md">Смотреть всё</button>
+            </div>
+            
         </div>
     </section>
 
@@ -511,8 +528,8 @@
                         <li>Взаимодействие с кредиторами</li>
                         <li>Общение с коллекторами</li>
                     </ul>
-                    <div class="line"></div>
                 </div>
+                <div class="line"></div>
                 <div class="price__bottom-left">
                     <p class="price__bottom-p">В стоимость включены все обязательные расходы на процедуру</p>
                     <div class="table table--prices">
@@ -522,7 +539,7 @@
                         <p class="table-tittle"><span class="table-tittle--bold">10 000 руб.</span></p>
                         <p class="table-tittle">Оплата направления запросов в государственные органы</p>
                         <p class="table-tittle"><span class="table-tittle--bold">2000 – 5000 руб.</span></p>
-                        <p class="table-tittle">Информационные сообщения в ЕФРСБ -<br>(потребуется 7-10 публикаций). За 1 публикацию</p>
+                        <p class="table-tittle">Информационные сообщения в ЕФРСБ - (потребуется 7-10 публикаций). За 1 публикацию</p>
                         <p class="table-tittle table-tittle-pading"><span class="table-tittle--bold">400 руб.</span></p>
                         <p class="table-tittle">Нотариальные расходы (доверенность)</p>
                         <p class="table-tittle"><span class="table-tittle--bold">1500 – 3000 руб.</span></p>
@@ -536,7 +553,9 @@
 
     <section class="feedback-section">
         <div class="container">
-            <img class="feedback__img" src="./assets/svg/logo_big_white.svg" alt="">
+            <div class="feedback__img">
+                <img src="./assets/svg/logo_big_white.svg" alt="">
+            </div>
             <form class="feedback-form" action="">
                 <h2 class="h2">Нужна помощь?<br>Получите бесплатную консультацию!</h2>
                 <div class="feedback__input-group">
@@ -643,6 +662,9 @@
                     </div>
                 </div>
             </div>
+            <div class="button-mobile">
+                <button class="button button--tertiary button--size-md">Смотреть всё</button>
+            </div>
         </div>
     </section>
 
@@ -698,6 +720,9 @@
                     <p class="review-card__info">425K просмотров, 5 месяц назад</p>
                 </div>
             </div>
+            <div class="button-mobile">
+                <button class="button button--tertiary button--size-md">Смотреть всё</button>
+            </div> 
         </div>
     </section>
 
@@ -796,6 +821,9 @@
                     <p class="news__description">Процедура банкротства в некоторых случаях является единственным способом решения финансовых проблем граждан.</p>
                 </div>
             </div>
+            <div class="button-mobile">
+                <button class="button button--tertiary button--size-md">Смотреть всё</button>
+            </div> 
         </div>
     </section>
 
@@ -841,10 +869,13 @@
                     </div>
                 </div>
             </div>
+            <div class="button-mobile">
+                <button class="button button--tertiary button--size-md">Смотреть всё</button>
+            </div> 
         </div>
     </section>
 
-    <footer class="basement-footer">
+    <!-- <footer class="basement-footer">
         <div class="container">
             <div class="feedback-footer">
                 <img class="feedback-footer__img" src="./assets/img/image-footer.png" alt="">
